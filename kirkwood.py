@@ -38,6 +38,7 @@ sim.N_active = 3
 
 for i, t in enumerate(times):
     sim.integrate(t)
+    #to better track the progress
     localtime = time.localtime()
     current_time = time.strftime("%H:%M:%S", localtime)
     print(f"Step {i}/{Nsteps}, Time: {t/yr:.2f} years, Current time: {current_time}")
